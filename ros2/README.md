@@ -4,28 +4,32 @@ This package provides a ROS2 interface for the MagiClaw robotic system, allowing
 
 ## Installation
 
-Install `magiclaw_msgs` package:
-
-```bash
-cd magiclaw-ros/magiclaw_msgs
-rosdep install --from-paths src --ignore-src -r -y
-colcon build --package-select magiclaw_msgs
-source install/setup.bash
-```
-
 Compile the `proto` files:
 
 ```bash
-cd magiclaw-ros/ros2/modules/protobuf
+cd magiclaw-ros/ros2/src/magiclaw/modules/protobuf
 protoc --proto_path=. --python_out=. *.proto
 ```
 
-Install `magiclaw_ros2` package:
+Install dependencies:
 
 ```bash
 cd magiclaw-ros/ros2
 rosdep install --from-paths src --ignore-src -r -y
-pip install .
+```
+
+Install `magiclaw_msgs` package:
+
+```bash
+colcon build --package-select magiclaw_msgs
+source install/setup.bash
+```
+
+Install `magiclaw` package:
+
+```bash
+colcon build --packages-select magiclaw
+source install/setup.bash
 ```
 
 ## Usage

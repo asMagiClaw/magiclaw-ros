@@ -19,7 +19,7 @@ include_directories(
 )
 
 catkin_install_python(PROGRAMS
-  magiclaw/magiclaw_pub.py
+  scripts/magiclaw_pub.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

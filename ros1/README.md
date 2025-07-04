@@ -4,27 +4,32 @@ This package provides a ROS1 interface for the MagiClaw robotic system, allowing
 
 ## Installation
 
-Install the `magiclaw_msgs` package:
-
-```bash
-cd magiclaw-ros/magiclaw_msgs
-rosdep install --from-paths src --ignore-src -r -y
-catkin_make
-source devel/setup.bash
-```
-
 Compile the `proto` files:
 
 ```bash
-cd magiclaw-ros/ros1/modules/protobuf
+cd magiclaw-ros/ros1/magiclaw/modules/protobuf
 protoc --proto_path=. --python_out=. *.proto
+```
+
+Install dependencies:
+
+```bash
+cd magiclaw-ros/ros1
+rosdep install --from-paths src --ignore-src -r -y
+```
+
+Install the `magiclaw_msgs` package:
+
+```bash
+cd magiclaw-ros/ros1/magiclaw_msgs
+catkin_make
+source devel/setup.bash
 ```
 
 Install `magiclaw_ros1` package:
 
 ```bash
-cd magiclaw-ros/ros1
-rosdep install --from-paths src --ignore-src -r -y
+cd magiclaw-ros/ros1/magiclaw
 catkin_make
 source devel/setup.bash
 ```

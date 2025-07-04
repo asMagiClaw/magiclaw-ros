@@ -17,9 +17,18 @@ add_message_files(
 )
 
 generate_messages(
-  DEPENDENCIES std_msgs sensor_msgs
+  DEPENDENCIES
+  std_msgs
+  sensor_msgs
 )
 
 catkin_package(
-  CATKIN_DEPENDS std_msgs sensor_msgs message_runtime
+  CATKIN_DEPENDS
+  std_msgs
+  sensor_msgs
+  message_runtime
+)
+
+include_directories(
+  ${catkin_INCLUDE_DIRS}
 )

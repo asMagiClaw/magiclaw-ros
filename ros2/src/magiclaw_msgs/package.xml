@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>magiclaw_msgs</name>
+  <version>1.0.0</version>
+  <description>ROS messages for MagiClaw</description>
+
+  <maintainer email="12231112@mail.sustech.edu.cn">Xudong Han</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <build_depend>rosidl_default_generators</build_depend>
+  <exec_depend>rosidl_default_runtime</exec_depend>
+
+  <build_depend>std_msgs</build_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+
+</package>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>magiclaw_msgs</name>
-  <version>0.0.1</version>
+  <version>1.0.0</version>
   <description>ROS messages for MagiClaw</description>
 
   <maintainer email="12231112@mail.sustech.edu.cn">Xudong Han</maintainer>
